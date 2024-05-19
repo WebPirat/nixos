@@ -1,0 +1,150 @@
+[{
+
+    "height": 35, // Waybar height (to be removed for auto height)
+    "layer": "top", // Waybar at top layer
+    "output": "DP-3",
+    "margin": "7 7 0 7",
+    "include": ["~/Documents/nixos/theme/waybar/config/top_moduls.json"],   
+    "modules-left": ["sway/workspaces"],
+    "modules-center": ["clock"],
+    "modules-right": ["idle_inhibitor", "custom/sink-switch", "pulseaudio", "custom/power-menu"],
+},
+{
+    "height": 35, // Waybar height (to be removed for auto height)
+    "layer": "top", // Waybar at top layer
+    "position": "bottom",
+    "output": "DP-3",
+    "margin": "0 7 7 7",
+    "include": ["~/Documents/nixos/theme/waybar/config/bottom_moduls.json"],  
+    "modules-left": ["custom/launcher", "network"],
+    "modules-center": ["sway/window"],
+    "modules-right": ["custom/spotify", "tray"],
+    
+
+},
+{	
+    "layer": "top", // Waybar at top layer
+    "position": "left",
+    "output": "DP-1",
+    "margin": "7 0 7 7",
+    "width": 120,
+    "include": ["~/Documents/nixos/theme/waybar/config/left_moduls.json"], 
+    "modules-left": ["cpu", "custom/gpu-usage", "memory","disk","disk#work","disk#data"],
+    "modules-center": [],
+    "modules-right": ["temperature", "temperature#2", "temperature#3", "temperature#4", "temperature#5", "temperature#6"],
+
+},
+{
+    "layer": "top", // Waybar at top layer
+    "position": "right",
+    "output": "DP-2",
+    "margin": "7 7 7 0",
+    "width": 120,
+    "include": ["~/Documents/nixos/theme/waybar/config/generated/folders.json"], 
+    "modules-left": ["group/app#1","group/home-folders", "group/custom-folders"],
+    "modules-center": [],
+    "modules-right": [],
+    "custom/discord": {
+      "format": "{}",
+      "exec": "$HOME/Documents/nixos/theme/waybar/config/scripts/discord-status.sh",
+      "return-type": "json"
+    },
+    "group/custom-folders": {
+        "orientation": "vertical",
+        "modules": [
+            "custom/folder#1", 
+            "custom/folder#2", 
+            "custom/folder#3", 
+            "custom/folder#4", 
+            "custom/folder#5"
+        ]
+    },
+    "group/home-folders": {
+        "orientation": "vertical",
+        "modules": [
+            "custom/vseperator",
+            "custom/home",
+            "custom/home/documents",
+            "custom/home/desktop",
+            "custom/home/downloads",
+            "custom/home/music",
+            "custom/home/pictures",
+            "custom/home/videos",
+            "custom/vseperator",
+            "custom/home/work",
+            "custom/home/data",
+            "custom/vseperator",
+        ]
+    },
+    "group/app#1": {
+        "orientation": "horizontal",
+        "modules": [
+            "custom/app#whatsapp",
+            "custom/app#discord",
+            "custom/app#slack",           
+        ]
+    },
+    "custom/vseperator": {
+        "format": "------------",
+    },
+    "custom/app#discord": {
+        "format": "<span font='18'></span> ",
+        "on-click": "discord"
+    },
+    "custom/app#element": {
+        "format": "<span font='18'></span>",
+        "on-click": "Element"
+    },
+    "custom/app#slack": {
+        "format": "<span font='18'></span> ",
+        "on-click": "whatsapp"
+    },
+    "custom/app#whatsapp": {
+        "format": "<span font='18'></span>  ",
+        "on-click": "whatsapp"
+    },
+    "custom/home": {
+        "format": "  User     ",
+        "on-click": "nautilus '/home/webpirat/'"
+    },
+    "custom/home/documents": {
+        "format": "  Documents",
+        "on-click": "nautilus '/home/webpirat/Documents'"
+    },
+    "custom/home/desktop": {
+        "format": "  Desktop  ",
+        "on-click": "nautilus '/home/webpirat/Desktop'"
+    },
+    "custom/home/downloads": {
+        "format": "  Downloads",
+        "on-click": "nautilus '/home/webpirat/Downloads'"
+    },
+    "custom/home/music": {
+        "format": "  Music    ",
+        "on-click": "nautilus '/home/webpirat/Music'"
+    },
+    "custom/home/pictures": {
+        "format": "  Pictures ",
+        "on-click": "nautilus '/home/webpirat/Pictures'"
+    },
+    "custom/home/videos": {
+        "format": "  Videos   ",
+        "on-click": "nautilus '/home/webpirat/Videos'"
+    },
+    "custom/home/work": {
+        "format": "  Work     ",
+        "on-click": "nautilus '/mnt/work'"
+    },
+    "custom/home/data": {
+        "format": "  Data     ",
+        "on-click": "nautilus '/mnt/data'"
+    },
+    "custom/folder": {
+        "format": "{}",	
+        "exec": "$HOME/Documents/nixos/theme/waybar/config/scripts/get_latest_git.sh",
+        "return-type": "json"
+    }
+}
+
+]
+

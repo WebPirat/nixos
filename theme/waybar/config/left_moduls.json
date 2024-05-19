@@ -1,0 +1,78 @@
+{
+    "disk": {
+      "interval": 30,
+      "format": " {percentage_free}%",
+      "path": "/"
+    },
+    "disk#work": {
+      "interval": 30,
+      "format": " {percentage_free}%",
+      "path": "/mnt/work"
+    },
+    "disk#data": {
+      "interval": 30,
+      "format": " {percentage_free}%",
+      "path": "/mnt/data"
+    },    
+    "temperature": {
+      "justify":"left",
+      "interval": 10,
+      "format": " {temperatureC}°C",
+      "max-length": 10
+    },
+    "temperature#2": {
+      "justify":"left",
+      "hwmon-path": "/sys/class/hwmon/hwmon1/temp1_input",
+      "interval": 10,
+      "format": " {temperatureC}°C",
+      "max-length": 10
+    },
+    "temperature#3": {
+      "justify":"left",
+      "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+      "interval": 10,
+      "format": " {temperatureC}°C",
+      "max-length": 10
+    },
+    "temperature#4": {
+      "justify":"left",
+      "hwmon-path": "/sys/class/hwmon/hwmon3/temp1_input",
+      "interval": 10,
+      "format": " {temperatureC}°C",
+      "max-length": 10
+    },
+    "temperature#5": {
+      "justify":"left",
+      "hwmon-path": "/sys/class/hwmon/hwmon4/temp1_input",
+      "interval": 10,
+      "format": " {temperatureC}°C",
+      "max-length": 10
+    },
+    "temperature#6": {
+      "justify":"left",
+      "hwmon-path": "/sys/class/hwmon/hwmon5/temp1_input",
+      "interval": 10,
+      "format": " {temperatureC}°C",
+      "max-length": 10
+    },
+    "cpu": {
+    "justify":"left",
+    "interval": 10,
+    "format": "  {}%",
+    "max-length": 10,
+    "on-click": ""
+    },
+	"custom/gpu-usage": {
+	  "exec": "cat /sys/class/hwmon/hwmon5/device/gpu_busy_percent",
+	  "format": "  {}%",
+	  "return-type": "",
+	  "interval": 1
+	},
+    "memory": {
+    "justify":"left",
+    "interval": 30,
+    "format": " {}%",
+    "format-alt":" {used:0.1f}GB",
+    "max-length": 10
+    },
+}

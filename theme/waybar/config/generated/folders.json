@@ -1,0 +1,7 @@
+{
+"custom/folder#1": { "format": "  vue-cypre", "on-click": "nautilus '/mnt/work/Git/vue-cypress-lint-stack'" },
+"custom/folder#2": { "format": "  zigparses", "on-click": "nautilus '/mnt/work/Git/zigparsescsv'" },
+"custom/folder#3": { "format": "  pirate-we", "on-click": "nautilus '/mnt/work/Git/pirate-web'" },
+"custom/folder#4": { "format": "  smac     ", "on-click": "nautilus '/mnt/work/Git/smac'" },
+"custom/folder#5": { "format": "  pirate-db", "on-click": "nautilus '/mnt/work/Git/pirate-db'" }
+}
