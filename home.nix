@@ -22,6 +22,7 @@
 		go
 		golangci-lint
 		gcc
+		ripgrep
 		air
 		nodePackages_latest.nodejs
 		sqlitebrowser
