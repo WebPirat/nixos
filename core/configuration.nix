@@ -23,7 +23,7 @@
 
   # Enable networking
   networking.networkmanager.enable = true;
-  networking.nameservers = [ "8.8.8.8" "8.8.8.4" ];
+  #networking.nameservers = [ "8.8.8.8" "8.8.8.4" ];
   # Set your time zone.
   time.timeZone = "Europe/Vienna";
 
