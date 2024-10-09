@@ -8,7 +8,7 @@
   home.stateVersion = "23.11"; # Please read the comment before changing.
   imports = [ 
   	inputs.nixvim.homeManagerModules.nixvim
-  	./editor/nvim.nix
+  	./editor/default.nix
 		./theme/default.nix
 		./bash
 	 ];
@@ -20,6 +20,8 @@
     thunderbird
 		waybar
 		rofi-wayland
+    yarn
+    httpie
     maven
     jdk21
 		go

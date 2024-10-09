@@ -23,7 +23,7 @@
 
   # Enable networking
   networking.networkmanager.enable = true;
-
+  networking.nameservers = [ "8.8.8.8" "8.8.8.4" ];
   # Set your time zone.
   time.timeZone = "Europe/Vienna";
 
@@ -62,7 +62,6 @@
   services.printing.enable = true;
 
   # Enable sound with pipewire.
-  sound.enable = true;
   hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
@@ -87,7 +86,7 @@
     description = "Dieter Koch";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
-      firefox
+     firefox
     #  thunderbird
     ];
   };
@@ -99,25 +98,17 @@
   # Workaround for GNOME autologin: https://github.com/NixOS/nixpkgs/issues/103746#issuecomment-945091229
   systemd.services."getty@tty1".enable = false;
   systemd.services."autovt@tty1".enable = false;
+  
+  #DNS
+  services.resolved.enable =true;
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
   security.polkit.enable = true;
   # List packages installed in system profile. To search, run:
   # $ nix search wget
- virtualisation.containers.enable = true;
-  virtualisation = {
-    podman = {
-      enable = true;
-
-      # Create a `docker` alias for podman, to use it as a drop-in replacement
-      dockerCompat = true;
-
-      # Required for containers under podman-compose to be able to talk to each other.
-      defaultNetwork.settings.dns_enabled = true;
-    };
-  };
-
+# virtualisation.containers.enable = true;
+ virtualisation.docker.enable = true;
   environment.systemPackages = with pkgs; [
   #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
   #  wget
@@ -128,9 +119,8 @@
 		foot
   	discord
   	element-desktop
-		podman
-		podman-compose
-		pods
+		docker
+		docker-compose		
 		pavucontrol
     grim # screenshot functionality
     slurp # screenshot functionality

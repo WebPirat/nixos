@@ -3,6 +3,7 @@ description = "WebPirat's NixOS Configuration";
 
 inputs = {
 	nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+ #nixpkgs.url = "https://github.com/NixOS/nixpkgs/archive/refs/heads/master.zip";
 	stylix.url = "github:danth/stylix";
 	home-manager = {
 	      url = "github:nix-community/home-manager/";
