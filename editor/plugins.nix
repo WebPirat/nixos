@@ -6,8 +6,8 @@
   auto-save.enable = true;
   lsp-format.enable = true;
   coq-nvim.enable = true;
-  copilot-vim.enable = true;
-  copilot-chat.enable = true;
+  ##copilot-vim.enable = true;
+  ##copilot-chat.enable = true;
 
   cmp-nvim-lsp.enable = true;
   lualine.enable = true;

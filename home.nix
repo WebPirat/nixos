@@ -18,6 +18,7 @@
   # environment.
   home.packages = with pkgs; [
     thunderbird
+    gimp
 		waybar
 		rofi-wayland
     yarn
