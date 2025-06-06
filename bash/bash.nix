@@ -5,7 +5,7 @@ programs.bash = {
 
       shellAliases = {
         nixupdate = "sudo nixos-rebuild switch";
-        switchnix = "sudo nixos-rebuild switch --flake ~/Documents/nixos#workstation";
+        switchnix = "sudo nixos-rebuild switch --flake ~/Dokumente/nixos#workstation";
         nixgen = "sudo nix-env -p /nix/var/nix/profiles/system --list-generations";
         ne = "nix-env";
         ni = "nix-env -iA";

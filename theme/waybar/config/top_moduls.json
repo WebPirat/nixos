@@ -104,8 +104,6 @@
     },
 
     "battery": {
-      "bat": "BAT1",
-      "adapter": "/sys/class/power_supply/",
       "interval": 60,
       "states": {
 			"good": 95,

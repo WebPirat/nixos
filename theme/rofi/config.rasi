@@ -12,3 +12,5 @@ configuration {
 	xoffset: 0;
 	yoffset: 0;
 }
+
+@theme "/nix/store/cs7389l60jrmqicl19dsc50rvrwy3pcx-rofi-1.7.5+wayland3/share/rofi/themes/gruvbox-dark-hard.rasi"

@@ -19,10 +19,10 @@ inputs = {
     nixosConfigurations.workstation = nixpkgs.lib.nixosSystem {
       specialArgs = { inherit inputs; };
       modules = [
-			  stylix.nixosModules.stylix
+        stylix.nixosModules.stylix
         ./core/configuration.nix
         ./core/hardware-configuration.nix
-				./theme/stylix.nix
+	./theme/stylix.nix
         home-manager.nixosModules.home-manager
           {
             home-manager = {

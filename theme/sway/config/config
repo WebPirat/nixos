@@ -5,13 +5,11 @@ input * {
         xkb_layout "de"
 }
 input type:keyboard xkb_numlock enabled
-#monitors
-output DP-1 pos 0 0
-output DP-3 pos 1920 0
-output DP-2 pos 3840 0
 #wallpaper
-output * background ~/Documents/nixos/theme/wallpapers/main.jpg fill
+output * background ~/Dokumente/nixos/theme/wallpapers/main.jpg fill
 
+#monitor
+output eDp-1 pos 0 0
 
 #opacity
 
@@ -329,8 +327,8 @@ default_border pixel 3
 #gaps inner 1
 
 #screenshots
-bindsym  Print exec grim -g "$(slurp)" - | wl-copy && wl-paste > ~/Pictures/Screenshots/Screenshot-$(date +%F_%T).png | notify-send "Screenshot of the region taken" -t 1000 # screenshot of a region
-bindsym Shift+Print exec grim - | wl-copy && wl-paste > ~/Pictures/Screenshots/Screenshot-$(date +%F_%T).png | notify-send "Screenshot of whole screen taken" -t 1000 # screenshot of the whole screen
+bindsym  Print exec grim -g "$(slurp)" - | wl-copy && wl-paste > ~/Bilder/Screenshots/Screenshot-$(date +%F_%T).png | notify-send "Screenshot of the region taken" -t 1000 # screenshot of a region
+bindsym Shift+Print exec grim - | wl-copy && wl-paste > ~/Bilder/Screenshots/Screenshot-$(date +%F_%T).png | notify-send "Screenshot of whole screen taken" -t 1000 # screenshot of the whole screen
 
 #python 
 bindsym xf86calculator exec alacritty -e python3

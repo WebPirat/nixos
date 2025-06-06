@@ -8,7 +8,7 @@
   home.stateVersion = "23.11"; # Please read the comment before changing.
   imports = [ 
   	inputs.nixvim.homeManagerModules.nixvim
-  	./editor/nvim.nix
+  	./editor/default.nix
 		./theme/default.nix
 		./bash
 	 ];
@@ -18,7 +18,8 @@
   # environment.
   home.packages = with pkgs; [
     thunderbird
-		waybar
+		teamviewer
+    waybar
 		rofi-wayland
     maven
     jdk21
@@ -36,6 +37,8 @@
 		spotify
 	  playerctl
 		git-credential-oauth
+    geeqie
+    unzip
   ];
 
 
@@ -71,10 +74,10 @@
   };
  #xdg.configFile."sway/config".source = pkgs.lib.mkOverride 0 "/home/<user>/dotfiles/sway/config"
 	xdg.configFile = {
-    "rofi/config.rasi".source = pkgs.lib.mkOverride 0  (config.lib.file.mkOutOfStoreSymlink "/home/webpirat/Documents/nixos/theme/rofi/config.rasi");
-    "sway/config".source = pkgs.lib.mkOverride 0  (config.lib.file.mkOutOfStoreSymlink "/home/webpirat/Documents/nixos/theme/sway/config/config");
-    "waybar/config.jsonc".source = pkgs.lib.mkOverride 0 (config.lib.file.mkOutOfStoreSymlink "/home/webpirat/Documents/nixos/theme/waybar/config/config.jsonc");
-    "waybar/style.css".source = pkgs.lib.mkOverride 0 (config.lib.file.mkOutOfStoreSymlink  "/home/webpirat/Documents/nixos/theme/waybar/config/style.css");
+    "rofi/config.rasi".source = pkgs.lib.mkOverride 0  (config.lib.file.mkOutOfStoreSymlink "/home/webpirat/Dokumente/nixos/theme/rofi/config.rasi");
+    "sway/config".source = pkgs.lib.mkOverride 0  (config.lib.file.mkOutOfStoreSymlink "/home/webpirat/Dokumente/nixos/theme/sway/config/config");
+    "waybar/config.jsonc".source = pkgs.lib.mkOverride 0 (config.lib.file.mkOutOfStoreSymlink "/home/webpirat/Dokumente//nixos/theme/waybar/config/config.jsonc");
+    "waybar/style.css".source = pkgs.lib.mkOverride 0 (config.lib.file.mkOutOfStoreSymlink  "/home/webpirat/Dokumente/nixos/theme/waybar/config/style.css");
   };
 
   # Let Home Manager install and manage itself.
