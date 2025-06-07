@@ -4,6 +4,7 @@
     servers = import ./lsp-servers.nix;
   };
   auto-save.enable = true;
+  bufferline.enable = true;
   lsp-format.enable = true;
   coq-nvim.enable = true;
   cmp-nvim-lsp.enable = true;
