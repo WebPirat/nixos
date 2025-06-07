@@ -10,6 +10,17 @@
   { key = "v"; options.silent = true; options.noremap = true; action = "p"; }
   { key = "u"; options.silent = true; options.noremap = true; action = "Yp"; }
 
+
+{
+      key = "q"; # Beispiel: Space + f + s (für Function Scaffold)
+      action = "<cmd>lua _G.insert_function_scaffold()<CR>";
+      options = {
+        desc = "Insert Function Scaffold";
+        noremap = true;
+        silent = true;
+      };
+    }
+
 { key = "z"; options = { silent = true; noremap = true; }; action = "undo"; }
 { key = "Z"; options = { silent = true; noremap = true; }; action = "redo"; }
   { key = "öö"; mode = "i"; options.silent = true; options.noremap = true; action = "<esc>"; }
