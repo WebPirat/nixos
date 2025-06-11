@@ -2,22 +2,20 @@ local M = {}
 local sqlite = require("commit_timer.sqlite")
 
 local timer_start = nil
-local db_path = vim.fn.stdpath("data") .. "/commit_time.sqlite3"
 local db = nil
 
 function M.setup()
   print("[commit_timer] setup() called")
 
-  -- Open or create SQLite database
-  db = sqlite:new(db_path)
+  db = sqlite.new()  -- kein Argument mehr!
+
   if not db then
     print("[commit_timer] Failed to open DB")
     return
   end
 
-  print("[commit_timer] DB opened at: " .. db_path)
+  print("[commit_timer] DB opened")
 
-  -- Create table if it doesn't exist
   db:exec [[
     CREATE TABLE IF NOT EXISTS commit_times (
       id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -28,7 +26,6 @@ function M.setup()
   ]]
   print("[commit_timer] Table ensured")
 
-  -- Start timer when commit message opens
   vim.api.nvim_create_autocmd("BufReadPost", {
     pattern = "COMMIT_EDITMSG",
     callback = function()
@@ -37,7 +34,6 @@ function M.setup()
     end,
   })
 
-  -- On save, record commit duration and hash
   vim.api.nvim_create_autocmd("BufWritePost", {
     pattern = "COMMIT_EDITMSG",
     callback = function()
