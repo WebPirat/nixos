@@ -34,7 +34,7 @@
 		python3
 		google-chrome
 		freetube
-		spotify
+		sqlite
 	  playerctl
 		git-credential-oauth
     geeqie
