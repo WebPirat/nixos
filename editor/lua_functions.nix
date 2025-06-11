@@ -4,6 +4,7 @@
 # Wir geben hier einen String zurück, der den Lua-Code enthält.
 # Dieser String wird dann in extraConfigLua eingefügt.
 ''
+   require("commit_timer").setup()
   -- Diese Funktion fügt ein Funktionsgerüst basierend auf dem Dateityp ein.
   -- Sie ist global verfügbar, da sie im _G (globalen) Kontext definiert wird.
   function _G.insert_function_scaffold()

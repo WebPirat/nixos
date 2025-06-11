@@ -5,6 +5,7 @@ local db_path = vim.fn.stdpath("data") .. "/commit_time.sqlite3"
 local timer_start = nil
 
 function M.setup()
+  print("[commit_timer] setup() called")
   local db = sqlite.new(db_path)
   db:exec [[
     CREATE TABLE IF NOT EXISTS commit_times (
