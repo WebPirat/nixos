@@ -1,5 +1,5 @@
 {
-  lsp = {
+ lsp = {
     enable = true;
     servers = import ./lsp-servers.nix;
   };

@@ -14,6 +14,7 @@
     # Import your keymaps, plugins, and settings
     keymaps = import ./keymaps.nix;
     plugins = import ./plugins.nix;
+    extraPlugins = (import ./extraPlugins.nix { inherit pkgs; }); 
     opts = import ./settings.nix;
 
     # Importiere deinen Lua-Funktions-Code hier
