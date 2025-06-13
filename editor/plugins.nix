@@ -1,14 +1,12 @@
 {
-  lsp = {
+ lsp = {
     enable = true;
     servers = import ./lsp-servers.nix;
   };
   auto-save.enable = true;
+  bufferline.enable = true;
   lsp-format.enable = true;
   coq-nvim.enable = true;
-  ##copilot-vim.enable = true;
-  ##copilot-chat.enable = true;
-
   cmp-nvim-lsp.enable = true;
   lualine.enable = true;
   telescope.enable = true;
