@@ -14,7 +14,7 @@
   nvim-tree.enable = true;
   luasnip.enable = true;
   cmp_luasnip.enable = true;
-
+  web-devicons.enable = true;
   cmp = {
     enable = true;
     autoEnableSources = true;

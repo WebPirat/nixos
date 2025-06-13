@@ -32,11 +32,13 @@
 		air
 		nodePackages_latest.nodejs
 		sqlitebrowser
+    sqlite
 		whatsapp-for-linux
 		python3
 		google-chrome
 		freetube
-		spotify
+    filezilla
+	  feishin	
 	  playerctl
 		git-credential-oauth
   ];

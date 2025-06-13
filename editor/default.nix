@@ -12,7 +12,7 @@
     colorschemes.oxocarbon.enable = true;
 
     # Import your keymaps, plugins, and settings
-    keymaps = import ./keymaps.nix;
+    keymaps = import ./keymaps/default.nix;
     plugins = import ./plugins.nix;
     extraPlugins = (import ./extraPlugins.nix { inherit pkgs; }); 
     opts = import ./settings.nix;
