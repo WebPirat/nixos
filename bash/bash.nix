@@ -25,6 +25,7 @@ programs.bash = {
 	
 
 
+
 gc = ''
   bash -c '
     git add . &&
@@ -34,9 +35,8 @@ gc = ''
       git commit -m "$1"
     fi &&
     git push
-  ' bash
+  ' bash "$@"
 '';
-
 
       };
     };
