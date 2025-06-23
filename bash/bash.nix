@@ -22,7 +22,22 @@ programs.bash = {
 	gp = "git push -u origin main";
 	npi = "nix profile install";
 	h = "htop";
-	gc = "git commit -m";
+	
+
+
+gc = ''
+  bash -c '
+    git add . &&
+    if [ -z "$1" ]; then
+      git commit -m "update"
+    else
+      git commit -m "$1"
+    fi &&
+    git push
+  ' bash
+'';
+
+
       };
     };
 }
