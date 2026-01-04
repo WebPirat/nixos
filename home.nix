@@ -44,7 +44,8 @@ in {
     google-chrome
     freetube
     filezilla
-    feishin
+    php
+    phpPackages.composer
     playerctl
     git-credential-oauth
     insomnia
